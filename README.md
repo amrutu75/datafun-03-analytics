@@ -1,113 +1,29 @@
 # datafun-03-analytics
-# Pro Analytics 01: Setup and Workflow Guide
+# datafun-03-analytics
 
-This repository provides a clear, concise guide to help set up a machine for Python projects,
-initialize a new Python project, and follow a repeatable project workflow
-when developing professional Python projects.
+This project demonstrates how to fetch and process various types of 
+data (Excel, JSON, text, and CSV) using Python. 
 
-The instructions are divided into three parts.
+The repository includes:
 
-## Part 1: Set Up Machine & Sign up for GitHub
+- Four example fetchers: Scripts to retrieve data from the web.
+- Four example processors: Scripts to analyze and process the fetched data.
 
-Go to [🟢 Machine Setup](01-machine-setup/MACHINE-SETUP.md) to prepare for Python projects.
-Start here to set up a machine for the first time (or to upgrade or verify professional tools).
+Start by running the examples to understand their functionality, and then build your own scripts to fetch and process data of your choice (using each of these example types).
 
-This section contains **one-time tasks** including:
+## Project Requirements
 
-1. View file extensions and hidden files and folders.
-2. Optional: Install (or verify) a package manager for your operating system.
-3. Install Python, Git, and Visual Studio (VS) Code for your operating system.
-4. Configure Git
-5. Install common VS Code extensions.
-6. Create a folder on your machine to hold your GitHub projects.
-7. Create a GitHub account (join 100 Million Developers!)
+- VS Code
+- Git
+- Python 
 
----
+## Professional Python Workflow
 
-## Part 2: Initialize a Project
+See [pro-analytics-01](https://github.com/denisecase/pro-analytics-01/)
 
-Go to [🟠 Project Initialization](02-project-initialization/PROJECT-INITIALIZATION.md) when **starting a new project**.
+## Commands to Manage Virtual Environment
 
-This section walks you through the steps to either:
-
-1. Copy an existing project OR start a new project from scratch.
-2. Clone your new GitHub repo to your machine.
-3. Add common project files.
-4. Git add-commit-push the changes to GitHub.
-5. Create a local project virtual environment for Python.
-
-NEW: Choose your approach for managing your virtual environment. This guide supports:
-
-- **Option A:** traditional `venv` + `requirements.txt` - this is the **recommended** choice as it is widely used and supported across all tooling. Most course instructions refer to `venv`, and everyone working with Python should be familiar with this workflow. 
-
-- **Option B:** a newer, faster `uv` + `pyproject.toml` - `uv` is significantly faster, but not yet widely adopted. The `pyproject.toml` file replaces `requirements.txt` and includes additional information. This is an advanced option, intended for use only after mastering Option A.
-
----
-
-## Part 3: Work on the Project Over Time
-
-Go to [🔵 Repeatable Workflow](03-repeatable-workflow/REPEATABLE-WORKFLOW.md) for ongoing project development.
-
-This section provides the **repeatable steps** for working on Python projects.
-These steps are typically followed whenever we make changes to a project. The workflow includes:
-
-1. Pull any recent changes from GitHub.
-2. Activate your virtual environment.
-3. Install dependencies.
-4. Run scripts and/or Jupyter notebooks.
-5. Make updates, verify the code still runs, and git add-commit-push to GitHub.
-
----
-
-## Important
-
-- Follow the instructions carefully.
-- Follow the instructions in the recommended order.
-- Verify each step before proceeding.
-
-## Celebrate
-
-Follow each step carefully.
-We have helped hundreds of new analysts get started with professional Python.
-Verify you can run both a script and a notebook successfully.
-Then, celebrate - that's a big iceberg needed to get started with Professional Python.
-
-## Follow The Proven Path Provided
-
-Hopefully, each step is not too bad and things go well.
-When they don't - that's to be expected.
-Part of the reason we get hired is to "figure things out" and we are here to help you do that.
-Learn to do a web search, and experiment with free AI assistants to help explain and provide any additional details needed.
-Remember, YOU are in charge.
-This is the process we support and these instructions work.
-Do NOT deviate unless you agree to invest time and energy to ensure any of the many alternate paths work for you throughout the program.
-
-## Explore
-
-AFTER that is where the power and joy of working with Python begins.
-Keep good notes.
-Save the working versions and then, change things. For example:
-
-- Rename a variable.
-- Add a new statement.
-- Comment things out.
-- Rename a function.
-- View the logs. Log something new (e.g., every function when called and before returning a value).
-
-Working with code is a fun, safe, rewarding way to learn.
-If you enjoy puzzles, getting value from Python is a great way to earn a living.
-
-## CheatSheet: Commands to Manage Virtual Environment
-
-These commands:
-
-1. Create a local project virtual environment in a folder named `.venv`.
-2. Activate the virtual environment.
-3. Install and upgrade key tools in .venv.
-4. Install and upgrade required project dependencies.
-
-<details>
-<summary><strong>Windows PowerShell (recommended Option A + requirements.txt)</strong></summary>
+For Windows PowerShell (change if using Mac/Linux)
 
 ```powershell
 py -m venv .venv
@@ -115,76 +31,36 @@ py -m venv .venv
 py -m pip install --upgrade pip setuptools wheel
 py -m pip install --upgrade -r requirements.txt
 ```
-
-</details>
-
-<details>
-<summary><strong>Windows PowerShell (advanced Option B + pyproject.toml)</strong></summary>
-
-```powershell
-uv venv
-.\.venv\Scripts\activate
-uv pip install --upgrade pip setuptools wheel
-uv sync
-```
-
-</details>
-
-<details>
-<summary><strong>Mac/Linux/WSL (recommended Option A + requirements.txt)</strong></summary>
-
-```shell
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install --upgrade pip setuptools wheel
-python3 -m pip install --upgrade -r requirements.txt
-```
-
-</details>
-
-<details>
-<summary><strong>Mac/Linux/WSL (advanced Option B + pyproject.toml)</strong></summary>
-
-```shell
-uv venv
-source .venv/bin/activate
-uv pip install --upgrade pip setuptools wheel
-uv sync
-```
-
-</details>
-
-## CheatSheet: Commands to Run Python Scripts
+## Commands to Run Python Scripts
 
 Remember to activate your .venv (and install packages if they haven't been installed yet) before running files.
-Verify that all external packages imported into a file are included in requirements.txt (and have NOT been commented out).
-
-<details>
-<summary><strong>Windows PowerShell</strong></summary>
+Verify that all required packages are included in requirements.txt (and have NOT been commented out).
 
 
 ```shell
-py demo_script.py
-py do_stats.py
-py draw_chart.py
-py greet_user.py
+py example_get_csv.py
+py example_get_excel.py
+py example_get_json.py
+py example_get_text.py
+
+py example_process_csv.py
+py example_process_excel.py
+py example_process_json.py
+py example_process_text.py
+
+py yourname_get_csv.py
+py yourname_get_excel.py
+py yourname_get_json.py
+py yourname_get_text.py
+
+py yourname_process_csv.py
+py yourname_process_excel.py
+py yourname_process_json.py
+py yourname_process_text.py
+
 ```
 
-</details>
-
-<details>
-<summary><strong>Mac/Linux/WSL</strong></summary>
-
-```shell
-python3 demo_script.py
-python3 do_stats.py
-python3 draw_chart.py
-python3 greet_user.py
-```
-
-</details>
-
-## CheatSheet: Commands to Git add-commit-push
+## Commands to Git add-commit-push
 
 ```shell
 git add .
@@ -192,14 +68,52 @@ git commit -m "custom message"
 git push -u origin main
 ```
 
-## OPTIONAL: Listen to the Audio Guides
+## Create and Run Your Data Fetchers
+1. Find data files on the web for each type (CSV, Excel, JSON, and text).  
+2. Create your own Python script to fetch each type of data and save it in a folder named **data**.
+3. Name your scripts:
+   1. yourname_get_csv.py
+   2. yourname_get_excel.py
+   3. yourname_get_json.py
+   4. yourname_get_text.py
+4. Implement your data-processing logic in small steps:
+   - Fetch data for one file type.
+   - Test, verify, and Git add-commit-push.
+  
+## Create and Run Your Data Processors
+1. Determine a simple metric from each of your data files.  
+2. Create your own Python script to read the data, process it, and save it in a folder named **data_processed**.
+3. Name your scripts:
+   1. yourname_process_csv.py
+   2. yourname_process_excel.py
+   3. yourname_process_json.py
+   4. yourname_process_text.py
+4. Work incrementally, using git add-commit-push after each bit of progress. 
 
-If you prefer listening **while following the written steps above**, optional [**Audio Guides**](https://denisecase.github.io/pro-analytics-01-audio-guides/) are available. These are **AI-generated two-person podcasts**.
+## Update README.md to Describe Your Work
+1. In your README.md, list each of your fetchers with a short description.
+2. In your README.md, list each of your processors with a short description of what it does. 
+3. Include the execution commands to run your fetchers and processors. 
 
-The audio is **supplementary** and **not a replacement for the written instructions**.
-The guides are not necessarily recommended. They may be distracting, and the speakers mispronounce key files and commands.
-They are mostly interesting from a state-of-the-art perspective.
+## Helpful Documentation
+If you're unsure about any of the setup steps or tools, consult these resources:
+- [requests library documentation](https://docs.python-requests.org)
 
-## OPTIONAL: Share Feedback
+### Tips
+- Use descriptive filenames for the data you fetch - and proper file extensions.
+- Work incrementally—verify each small step works before moving to the next.
+- The examples are required reading - use them to learn and understand first. 
+- Test each script carefully before proceeding.
+- Use meaningful commit messages when pushing to GitHub to document your progress.
 
-Feel free to ask questions in the [GitHub Discussions](https://github.com/denisecase/pro-analytics-01/discussions) or raise a [GitHub Issue](https://github.com/denisecase/pro-analytics-01/issues) if you have suggestions or need additional clarification.
+## Review Commit History
+Once your project is complete, review your commit history in GitHub under the **Commits** tab. 
+Ensure your commit messages are clear and professional.
+
+## Reference Projects
+
+Custom implementation of the example project at 
+[datafun-03-analytics](https://github.com/denisecase/datafun-03-analytics)
+
+- [Module 2 Repo](https://github.com/denisecase/datafun-02-project-setup)
+- [Module 1 Repo](https://github.com/denisecase/datafun-01-utils/)
