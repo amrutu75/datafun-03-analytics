@@ -1,5 +1,4 @@
 # datafun-03-analytics
-# datafun-03-analytics
 
 This project demonstrates how to fetch and process various types of 
 data (Excel, JSON, text, and CSV) using Python. 
