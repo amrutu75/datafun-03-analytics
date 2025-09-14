@@ -28,7 +28,7 @@ from utils_logger import logger
 # Declare Global Variables
 #####################################
 
-FETCHED_DATA_DIR = "example_data"
+FETCHED_DATA_DIR = "get_data"
 
 #####################################
 # Define Functions
